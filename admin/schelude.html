@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Расписание</title>
+    <link rel="stylesheet" href="..\css\style_schelude.css" />
+    <script src="..\js\script_schedule.js" defer></script>
+    <!--<script src="..\libs\rain.js" defer></script>-->
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <section class="layers">
+      <div class="layers__container">
+        <div class="layers__item layer-1" style="background-image: url(../img/layer-1.jpg);"></div>
+			  <div class="layers__item layer-2" style="background-image: url(../img/layer-2.png);"></div>
+        <div class="layers__item layer-3">
+          <div class="hero-content">
+              <a href="../admin.html" class="nav_link">Администратор</a>                           
+              <a href="../admin/schelude.html" class="nav_link">Расписание</a>
+              <a href="../admin/military.html" class="nav_link">Наряды</a>
+              <a href="../admin/pmk.html" class="nav_link">ПМК</a>
+              <a href="../admin/history.html" class="nav_link">История кафедры</a>
+            </div>
+            <div class = "start_calendar">
+              <label for="start_calendar" class = "label-calendar">Выбор даты:</label>
+              <input type="date" class = "start_calendar_date" id="start_calendar_date"/>
+              <button class="button" type = button id = "link-button"  >Сформировать расписание </button>
+              </div>
+            <div class="checkbox">
+              <input type="checkbox" class="my-checkbox" id = "checkbox" value="1"/>
+              <label for = "checkbox" >Показать всех</label>
+              </div>
+            <div class="checkbox_1">
+              <input type="checkbox" class="my-checkbox_1" id = "checkbox_2" value="2"/>
+              <label for = "checkbox_2" >ПMK 1</label>
+              <input type="checkbox" class="my-checkbox_1" id = "checkbox_3" value="3"/>
+              <label for = "checkbox_3" >ПMK 2</label>
+              </div>
+            <div class="checkbox_2_1">
+              <input type="checkbox" class="my-checkbox_2" id = "my_checkbox_2_1" value = "4"/>
+              <label for = "my_checkbox_2_1" >Пользователь 1</label>
+            </div>
+            <div class="checkbox_2_2">  
+              <input type="checkbox" class="my-checkbox_2" id = "my_checkbox_2_2" value="5"/>
+              <label for = "my_checkbox_2_2" >Пользователь 2</label>
+              </div>
+            <div class="checkbox_2_3"> 
+              <input type="checkbox" class="my-checkbox_2" id = "my_checkbox_2_3" value="6"/>
+              <label for = "my_checkbox_2_3" >Пользователь 3</label>
+              </div>
+            <div class="checkbox_2_4">   
+              <input type="checkbox" class="my-checkbox_2" id = "my_checkbox_2_4" value="7"/>
+              <label for = "my_checkbox_2_4" >Пользователь 4</label>
+              </div>  
+            <div class="checkbox_2_5">   
+              <input type="checkbox" class="my-checkbox_2" id = "my_checkbox_2_5" value="8"/>
+              <label for = "my_checkbox_2_5" >Пользователь 5</label>
+              </div>
+            <div class="checkbox_3_1">
+              <input type="checkbox" class="my-checkbox_3" id = "my_checkbox_3_1" value = "4"/>
+              <label for = "my_checkbox_3_1" >Пользователь 11</label>
+              </div>
+            <div class="checkbox_3_2">  
+              <input type="checkbox" class="my-checkbox_3" id = "my_checkbox_3_2" value="5"/>
+              <label for = "my_checkbox_3_2" >Пользователь 22</label>
+              </div>
+            <div class="checkbox_3_3"> 
+              <input type="checkbox" class="my-checkbox_3" id = "my_checkbox_3_3" value="6"/>
+              <label for = "my_checkbox_3_3" >Пользователь 33</label>
+              </div>
+            <div class="checkbox_3_4">   
+              <input type="checkbox" class="my-checkbox_3" id = "my_checkbox_3_4" value="7"/>
+              <label for = "my_checkbox_3_4" >Пользователь 44</label>
+              </div>  
+            <div class="checkbox_3_5">   
+              <input type="checkbox" class="my-checkbox_3" id = "my_checkbox_3_5" value="8"/>
+              <label for = "my_checkbox_3_5" >Пользователь 55</label>
+              </div> 
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Расписание</h2>
+                    </div>
+                  <div class="modal-body">
+                    <p>    " " </p>
+                    <table>
+                    <tbody id = "part_2_1">
+                      <tr>
+                        <th rowspan="2" > Звание, фамилия</th>
+                        <th rowspan="2" > Часы занятий</th>
+                        <th colspan="7">  1</th>
+                        <th colspan="8">  2</th>
+                        <th colspan="9">  3</th>
+                        <th colspan="10"> 4</th>
+                        <tr>
+                          <th id="none" scope="col">1</th>
+                          <th id="none" scope="col">2</th>
+                          <th id="none" scope="col">3</th>
+                          <th id="none" scope="col">4</th>
+                          <th id="none" scope="col">5</th>
+                          <th id="none" scope="col">6</th>
+                          <th id="none" scope="col">7</th>
+                          <th id="none" scope="col">8</th>
+                          <th id="none" scope="col">9</th>
+                          <th id="none" scope="col">10</th>
+                          <th id="none" scope="col">11</th>
+                          <th id="none" scope="col">12</th>
+                          <th id="none" scope="col">13</th>
+                          <th id="none" scope="col">14</th>
+                          <th id="none" scope="col">15</th>
+                          <th id="none" scope="col">16</th>
+                          <th id="none" scope="col">17</th>
+                          <th id="none" scope="col">18</th>
+                          <th id="none" scope="col">19</th>
+                          <th id="none" scope="col">20</th>
+                          <th id="none" scope="col">21</th>
+                          <th id="none" scope="col">22</th>
+                          <th id="none" scope="col">23</th>
+                          <th id="none" scope="col">24</th>
+                          <th id="none" scope="col">25</th>
+                          <th id="none" scope="col">26</th>
+                          <th id="none" scope="col">27</th>
+                          <th id="none" scope="col">28</th>
+                          <th id="none" scope="col">29</th>
+                          <th id="none" scope="col">30</th>
+                          <th id="none" scope="col">31</th>
+                        </tr>
+                      <tr>
+                        <td rowspan = "4">  Пользователь 1 </td>
+                        <td>1 - 2</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+
+                      </tr>
+                      <tr>
+                        <td>3 - 4</td>
+                        <td></td>
+                        <td></td>
+                        <td>АСУ8</td>
+                        <td>АСУ9</td>
+                        <td>АСУ10</td>
+                        <td>АСУ11</td>
+                        <td>АСУ12</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                      </tr>
+                      <tr>
+                        <td>5 - 6</td>
+                        <td></td>
+                        <td></td>
+                        <td>АСУ13</td>
+                        <td>АСУ14</td>
+                        <td>АСУ15</td>
+                        <td>АСУ16</td>
+                        <td>АСУ17</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                      </tr>
+                      <tr>
+                        <td>7 - 8</td>
+                        <td></td>
+                        <td></td>
+                        <td>АСУ18</td>
+                        <td>АСУ19</td>
+                        <td>АСУ20</td>
+                        <td>АСУ21</td>
+                        <td>АСУ22</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                    </tr>
+                    </tbody>
+                    <tbody id = "part_2_2">
+                      <tr>
+                        <th rowspan="2" > Звание, фамилия</th>
+                        <th rowspan="2" > Часы занятий</th>
+                        <th colspan="7">  1</th>
+                        <th colspan="8">  2</th>
+                        <th colspan="9">  3</th>
+                        <th colspan="10"> 4</th>
+                        <tr>
+                          <th id="none" scope="col">1</th>
+                          <th id="none" scope="col">2</th>
+                          <th id="none" scope="col">3</th>
+                          <th id="none" scope="col">4</th>
+                          <th id="none" scope="col">5</th>
+                          <th id="none" scope="col">6</th>
+                          <th id="none" scope="col">7</th>
+                          <th id="none" scope="col">8</th>
+                          <th id="none" scope="col">9</th>
+                          <th id="none" scope="col">10</th>
+                          <th id="none" scope="col">11</th>
+                          <th id="none" scope="col">12</th>
+                          <th id="none" scope="col">13</th>
+                          <th id="none" scope="col">14</th>
+                          <th id="none" scope="col">15</th>
+                          <th id="none" scope="col">16</th>
+                          <th id="none" scope="col">17</th>
+                          <th id="none" scope="col">18</th>
+                          <th id="none" scope="col">19</th>
+                          <th id="none" scope="col">20</th>
+                          <th id="none" scope="col">21</th>
+                          <th id="none" scope="col">22</th>
+                          <th id="none" scope="col">23</th>
+                          <th id="none" scope="col">24</th>
+                          <th id="none" scope="col">25</th>
+                          <th id="none" scope="col">26</th>
+                          <th id="none" scope="col">27</th>
+                          <th id="none" scope="col">28</th>
+                          <th id="none" scope="col">29</th>
+                          <th id="none" scope="col">30</th>
+                          <th id="none" scope="col">31</th>
+                        </tr>
+                      <tr>
+                        <td rowspan = "4">  Пользователь 2 </td>
+                        <td>1 - 2</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+
+                      </tr>
+                      <tr>
+                        <td>3 - 4</td>
+                        <td></td>
+                        <td></td>
+                        <td>АСУ8</td>
+                        <td>АСУ9</td>
+                        <td>АСУ10</td>
+                        <td>АСУ11</td>
+                        <td>АСУ12</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                      </tr>
+                      <tr>
+                        <td>5 - 6</td>
+                        <td></td>
+                        <td></td>
+                        <td>АСУ13</td>
+                        <td>АСУ14</td>
+                        <td>АСУ15</td>
+                        <td>АСУ16</td>
+                        <td>АСУ17</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                      </tr>
+                      <tr>
+                        <td>7 - 8</td>
+                        <td></td>
+                        <td></td>
+                        <td>АСУ18</td>
+                        <td>АСУ19</td>
+                        <td>АСУ20</td>
+                        <td>АСУ21</td>
+                        <td>АСУ22</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                        <td>АСУ7</td>
+                        <td>АСУ1</td>
+                        <td>АСУ2</td>
+                        <td>АСУ3</td>
+                        <td>АСУ4</td>
+                        <td>АСУ5</td>
+                        <td>АСУ6</td>
+                        <td>АСУ7</td>
+                    </tr>
+                  </tbody> 
+                  <tbody id = "part_2_3">
+                    <tr>
+                      <th rowspan="2" > Звание, фамилия</th>
+                      <th rowspan="2" > Часы занятий</th>
+                      <th colspan="7">  1</th>
+                      <th colspan="8">  2</th>
+                      <th colspan="9">  3</th>
+                      <th colspan="10"> 4</th>
+                      <tr>
+                        <th id="none" scope="col">1</th>
+                        <th id="none" scope="col">2</th>
+                        <th id="none" scope="col">3</th>
+                        <th id="none" scope="col">4</th>
+                        <th id="none" scope="col">5</th>
+                        <th id="none" scope="col">6</th>
+                        <th id="none" scope="col">7</th>
+                        <th id="none" scope="col">8</th>
+                        <th id="none" scope="col">9</th>
+                        <th id="none" scope="col">10</th>
+                        <th id="none" scope="col">11</th>
+                        <th id="none" scope="col">12</th>
+                        <th id="none" scope="col">13</th>
+                        <th id="none" scope="col">14</th>
+                        <th id="none" scope="col">15</th>
+                        <th id="none" scope="col">16</th>
+                        <th id="none" scope="col">17</th>
+                        <th id="none" scope="col">18</th>
+                        <th id="none" scope="col">19</th>
+                        <th id="none" scope="col">20</th>
+                        <th id="none" scope="col">21</th>
+                        <th id="none" scope="col">22</th>
+                        <th id="none" scope="col">23</th>
+                        <th id="none" scope="col">24</th>
+                        <th id="none" scope="col">25</th>
+                        <th id="none" scope="col">26</th>
+                        <th id="none" scope="col">27</th>
+                        <th id="none" scope="col">28</th>
+                        <th id="none" scope="col">29</th>
+                        <th id="none" scope="col">30</th>
+                        <th id="none" scope="col">31</th>
+                      </tr>
+                    <tr>
+                      <td rowspan = "4">  Пользователь 3 </td>
+                      <td>1 - 2</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+
+                    </tr>
+                    <tr>
+                      <td>3 - 4</td>
+                      <td></td>
+                      <td></td>
+                      <td>АСУ8</td>
+                      <td>АСУ9</td>
+                      <td>АСУ10</td>
+                      <td>АСУ11</td>
+                      <td>АСУ12</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                    </tr>
+                    <tr>
+                      <td>5 - 6</td>
+                      <td></td>
+                      <td></td>
+                      <td>АСУ13</td>
+                      <td>АСУ14</td>
+                      <td>АСУ15</td>
+                      <td>АСУ16</td>
+                      <td>АСУ17</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                    </tr>
+                    <tr>
+                      <td>7 - 8</td>
+                      <td></td>
+                      <td></td>
+                      <td>АСУ18</td>
+                      <td>АСУ19</td>
+                      <td>АСУ20</td>
+                      <td>АСУ21</td>
+                      <td>АСУ22</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                      <td>АСУ7</td>
+                      <td>АСУ1</td>
+                      <td>АСУ2</td>
+                      <td>АСУ3</td>
+                      <td>АСУ4</td>
+                      <td>АСУ5</td>
+                      <td>АСУ6</td>
+                      <td>АСУ7</td>
+                  </tr>
+                </tbody> 
+                <tbody id = "part_2_4">
+                  <tr>
+                    <th rowspan="2" > Звание, фамилия</th>
+                    <th rowspan="2" > Часы занятий</th>
+                    <th colspan="7">  1</th>
+                    <th colspan="8">  2</th>
+                    <th colspan="9">  3</th>
+                    <th colspan="10"> 4</th>
+                    <tr>
+                      <th id="none" scope="col">1</th>
+                      <th id="none" scope="col">2</th>
+                      <th id="none" scope="col">3</th>
+                      <th id="none" scope="col">4</th>
+                      <th id="none" scope="col">5</th>
+                      <th id="none" scope="col">6</th>
+                      <th id="none" scope="col">7</th>
+                      <th id="none" scope="col">8</th>
+                      <th id="none" scope="col">9</th>
+                      <th id="none" scope="col">10</th>
+                      <th id="none" scope="col">11</th>
+                      <th id="none" scope="col">12</th>
+                      <th id="none" scope="col">13</th>
+                      <th id="none" scope="col">14</th>
+                      <th id="none" scope="col">15</th>
+                      <th id="none" scope="col">16</th>
+                      <th id="none" scope="col">17</th>
+                      <th id="none" scope="col">18</th>
+                      <th id="none" scope="col">19</th>
+                      <th id="none" scope="col">20</th>
+                      <th id="none" scope="col">21</th>
+                      <th id="none" scope="col">22</th>
+                      <th id="none" scope="col">23</th>
+                      <th id="none" scope="col">24</th>
+                      <th id="none" scope="col">25</th>
+                      <th id="none" scope="col">26</th>
+                      <th id="none" scope="col">27</th>
+                      <th id="none" scope="col">28</th>
+                      <th id="none" scope="col">29</th>
+                      <th id="none" scope="col">30</th>
+                      <th id="none" scope="col">31</th>
+                    </tr>
+                  <tr>
+                    <td rowspan = "4">  Пользователь 4 </td>
+                    <td>1 - 2</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+
+                  </tr>
+                  <tr>
+                    <td>3 - 4</td>
+                    <td></td>
+                    <td></td>
+                    <td>АСУ8</td>
+                    <td>АСУ9</td>
+                    <td>АСУ10</td>
+                    <td>АСУ11</td>
+                    <td>АСУ12</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                  </tr>
+                  <tr>
+                    <td>5 - 6</td>
+                    <td></td>
+                    <td></td>
+                    <td>АСУ13</td>
+                    <td>АСУ14</td>
+                    <td>АСУ15</td>
+                    <td>АСУ16</td>
+                    <td>АСУ17</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                  </tr>
+                  <tr>
+                    <td>7 - 8</td>
+                    <td></td>
+                    <td></td>
+                    <td>АСУ18</td>
+                    <td>АСУ19</td>
+                    <td>АСУ20</td>
+                    <td>АСУ21</td>
+                    <td>АСУ22</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                    <td>АСУ7</td>
+                    <td>АСУ1</td>
+                    <td>АСУ2</td>
+                    <td>АСУ3</td>
+                    <td>АСУ4</td>
+                    <td>АСУ5</td>
+                    <td>АСУ6</td>
+                    <td>АСУ7</td>
+                </tr>
+              </tbody><tbody id = "part_2_5">
+                <tr>
+                  <th rowspan="2" > Звание, фамилия</th>
+                  <th rowspan="2" > Часы занятий</th>
+                  <th colspan="7">  1</th>
+                  <th colspan="8">  2</th>
+                  <th colspan="9">  3</th>
+                  <th colspan="10"> 4</th>
+                  <tr>
+                    <th id="none" scope="col">1</th>
+                    <th id="none" scope="col">2</th>
+                    <th id="none" scope="col">3</th>
+                    <th id="none" scope="col">4</th>
+                    <th id="none" scope="col">5</th>
+                    <th id="none" scope="col">6</th>
+                    <th id="none" scope="col">7</th>
+                    <th id="none" scope="col">8</th>
+                    <th id="none" scope="col">9</th>
+                    <th id="none" scope="col">10</th>
+                    <th id="none" scope="col">11</th>
+                    <th id="none" scope="col">12</th>
+                    <th id="none" scope="col">13</th>
+                    <th id="none" scope="col">14</th>
+                    <th id="none" scope="col">15</th>
+                    <th id="none" scope="col">16</th>
+                    <th id="none" scope="col">17</th>
+                    <th id="none" scope="col">18</th>
+                    <th id="none" scope="col">19</th>
+                    <th id="none" scope="col">20</th>
+                    <th id="none" scope="col">21</th>
+                    <th id="none" scope="col">22</th>
+                    <th id="none" scope="col">23</th>
+                    <th id="none" scope="col">24</th>
+                    <th id="none" scope="col">25</th>
+                    <th id="none" scope="col">26</th>
+                    <th id="none" scope="col">27</th>
+                    <th id="none" scope="col">28</th>
+                    <th id="none" scope="col">29</th>
+                    <th id="none" scope="col">30</th>
+                    <th id="none" scope="col">31</th>
+                  </tr>
+                <tr>
+                  <td rowspan = "4">  Пользователь 5 </td>
+                  <td>1 - 2</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+
+                </tr>
+                <tr>
+                  <td>3 - 4</td>
+                  <td></td>
+                  <td></td>
+                  <td>АСУ8</td>
+                  <td>АСУ9</td>
+                  <td>АСУ10</td>
+                  <td>АСУ11</td>
+                  <td>АСУ12</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                </tr>
+                <tr>
+                  <td>5 - 6</td>
+                  <td></td>
+                  <td></td>
+                  <td>АСУ13</td>
+                  <td>АСУ14</td>
+                  <td>АСУ15</td>
+                  <td>АСУ16</td>
+                  <td>АСУ17</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                </tr>
+                <tr>
+                  <td>7 - 8</td>
+                  <td></td>
+                  <td></td>
+                  <td>АСУ18</td>
+                  <td>АСУ19</td>
+                  <td>АСУ20</td>
+                  <td>АСУ21</td>
+                  <td>АСУ22</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+                  <td>АСУ7</td>
+                  <td>АСУ1</td>
+                  <td>АСУ2</td>
+                  <td>АСУ3</td>
+                  <td>АСУ4</td>
+                  <td>АСУ5</td>
+                  <td>АСУ6</td>
+                  <td>АСУ7</td>
+              </tr>
+            </tbody>  
+                   
+                  </table>
+                </div>               
+              </div>
+        </div>
+        <div id="myModal2" class="modal2">
+          <div class="modal-content2">
+            <div class="modal-header2">
+              <span class="close2">&times;</span>
+              <h2>Внести изменения</h2>
+              </div>
+              <form autocomplete="off" action="../action_page.php">
+                <div class="autocomplete" style="width:300px;">
+                  <input id="myInput" type="text" name="myCountry" placeholder="Страна">
+                </div>
+                <input type="submit">
+              </form>
+      </div>
+    </div>
+  </div>
+    </section>
+  </body>
+</html>
+    
